@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import CourseItem from "../components/CourseItem";
 import SelectBar from "../components/SelectBar";
-import { RandomComponent } from "../components/RandomComponent";
+import RandomComponent from "../components/RandomComponent";
 
 const Home = () => {
   const [selected, setSelected] = useState("showCourse");
@@ -21,7 +21,9 @@ const Home = () => {
             <CourseItem />
           </Div>
         ) : (
-          <RandomComponent />
+          <Div>
+            <RandomComponent />
+          </Div>
         )}
       </HomeContainer>
     </HomeWrapper>
@@ -57,4 +59,5 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
