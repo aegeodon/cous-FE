@@ -6,32 +6,22 @@ const Home = () => {
     <>
     <Navbar/>
     Home
-    <BoldText>This is SUIT Bold</BoldText>
+
+    <p>This is 그냥</p>
     <RegularText>This is SUIT Regular</RegularText>
-    <LightText>This is SUIT Light</LightText>
-    <SemiBoldText>This is SemiBoldText</SemiBoldText>
+    <Title>코럼버스</Title>
     </>
   )
 }
 
 export default Home;
 
-const BoldText = styled.h1`
-  font-family: 'SUIT', sans-serif;
-  font-weight: 700;
-`;
 
 const RegularText = styled.p`
-  font-family: 'SUIT', sans-serif;
+  font-family: 'SUIT-Regular', sans-serif;
   font-weight: 400;
 `;
-
-const LightText = styled.p`
-  font-family: 'SUIT', sans-serif;
-  font-weight: 300;
-`;
-
-const SemiBoldText = styled.p`
-  font-family: 'SUIT', sans-serif;
+const Title = styled.h1`
+  font-family: 'HSSanTokki', sans-serif;
   font-weight: 600;
 `

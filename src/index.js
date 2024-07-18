@@ -4,7 +4,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import axios from "axios";
 import "./reset.css"
-import './styles/fonts/font.css';
+import './index.css'
 
 const container = document.getElementById("root");
 const root = createRoot(container);

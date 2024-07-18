@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'HSSanTokki';
+	src: url('./styles/fonts/HSSanTokki.ttf');
+}
+
+@font-face {
+	font-family: 'SUIT-Bold';
+	src: url('./styles/fonts/SUIT-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'SUIT-ExtraBold';
+	src: url('./styles/fonts/SUIT-ExtraBold.ttf');
+}
+
+@font-face {
+	font-family: 'SUIT-ExtraLight';
+	src: url('./styles/fonts/SUIT-ExtraLight.ttf');
+}
+
+@font-face {
+	font-family: 'SUIT-Heavy';
+	src: url('./styles/fonts/SUIT-Heavy.ttf');
+}
+
+@font-face {
+	font-family: 'SUIT-Light';
+	src: url('./styles/fonts/SUIT-Light.ttf');
+}
+
+@font-face {
+	font-family: 'SUIT-Medium';
+	src: url('./styles/fonts/SUIT-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'SUIT-Regular';
+	src: url('./styles/fonts/SUIT-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'SUIT-SemiBold';
+	src: url('./styles/fonts/SUIT-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: 'SUIT-Thin';
+	src: url('./styles/fonts/SUIT-Thin.ttf');
+}
