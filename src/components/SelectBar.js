@@ -1,13 +1,26 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 const SelectBar = () => {
+  const [selected, setSelected] = useState("showCourse");
+
+  const handleSelect = (option) => {
+    setSelected(option);
+  };
+
   return (
     <Container>
       <SelectBarWrapper>
-        <ShowCourse>
+        <ShowCourse
+          isSelected={selected === "showCourse"}
+          onClick={() => handleSelect("showCourse")}
+        >
           <p>서울 추천 코스 보러 가기</p>
         </ShowCourse>
-        <Random>
+        <Random
+          isSelected={selected === "random"}
+          onClick={() => handleSelect("random")}
+        >
           <p>랜덤으로 지역 고르기</p>
         </Random>
       </SelectBarWrapper>
@@ -35,14 +48,14 @@ const SelectBarWrapper = styled.div`
 `;
 
 const ShowCourse = styled.div`
-  width: 442px;
+  width: 340px;
   height: 58px;
   border-radius: 25px;
   border: 1px solid #000;
-  background: #fceba5;
   margin-right: 28px;
   display: flex;
   justify-content: center;
+  background-color: ${(props) => (props.isSelected ? "#fceba5" : "#fff")};
 
   p {
     display: flex;
@@ -53,17 +66,19 @@ const ShowCourse = styled.div`
 
   &:hover {
     cursor: pointer;
+    background-color: #fceba5;
+    transition-duration: 0.2s;
   }
 `;
 
 const Random = styled.div`
-  width: 243px;
+  width: 340px;
   height: 58px;
   border-radius: 25px;
   border: 1px solid #000;
   display: flex;
   justify-content: center;
-
+  background-color: ${(props) => (props.isSelected ? "#fceba5" : "#fff")};
   p {
     display: flex;
     align-items: center;

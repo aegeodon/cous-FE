@@ -4,8 +4,16 @@ import right from "./../assets/Home/right.svg";
 import Tag from "./Tag";
 import Location from "./Location";
 import PlaceItem from "./PlaceItem";
+import oneline from "./../assets/Home/oneline.svg";
+import { useState } from "react";
 
 const CourseItem = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <Container>
       <Location />
@@ -20,7 +28,7 @@ const CourseItem = () => {
               </User>
               <Tag />
               <Tag />
-              <RightBtn src={right} />
+              <RightBtn src={right} onClick={handleToggle} />
             </InfoBox>
           </InfoWrapper>
           <PlaceWrapper>
@@ -39,6 +47,18 @@ const CourseItem = () => {
             <PlaceItem />
           </PlaceWrapper>
         </CourseItemBox>
+        {isOpen && (
+          <OneLineBox>
+            <OneLineTitle>
+              <img src={oneline} />
+              <span>코스 한줄소개</span>
+            </OneLineTitle>
+            <p>
+              제가 남자친구랑 갔던 코스예요! 기념일 같이 특별한 날 추천드려요🤩
+              특히 카페 강추합니다!!
+            </p>
+          </OneLineBox>
+        )}
       </CourseItemWrapper>
     </Container>
   );
@@ -115,5 +135,25 @@ const Right = styled.div`
   height: 38.4px;
   display: flex;
   justify-content: center;
+  align-items: center;
+`;
+
+const OneLineBox = styled.div`
+  width: 789px;
+  margin-bottom: 25px;
+
+  p {
+    margin-top: 15px;
+    font-family: "SUIT-Medium";
+    font-size: 20px;
+  }
+`;
+
+const OneLineTitle = styled.div`
+  color: #9d9d9d;
+  display: flex;
+  font-family: "SUIT-Regular";
+  font-size: 18px;
+  padding: 0 32px;
   align-items: center;
 `;
