@@ -13,18 +13,36 @@ const KakaoLogin = () => {
 
   return (
     <>
-      <LoginContainer>
-        <button alt="login" onClick={handleLogin} ></button>
-      </LoginContainer>
+      <CourseButton alt="login" onClick={handleLogin}>
+        <p className="logo">코럼버스</p>
+        <p>코스 추천받기</p>
+      </CourseButton>
     </>
   );
 };
 
 export default KakaoLogin;
 
-const LoginContainer = styled.div`
-  height: 100vh;
-  display: flex;
-  justify-content: center;
+const CourseButton = styled.button`
+  z-index: 0;
+  display: inline-flex;
+  padding: 10px 20px;
   align-items: center;
+  margin-top: 800px;
+  margin-bottom: 10px;
+  gap: 16px;
+  background: #000;
+  p {
+    color: #fff;
+    font-family: "SUIT SemiBold";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .logo {
+    margin-bottom: 7px;
+    font-family: "HSSanTokki";
+  }
 `;

@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<StartPage />} />
           <Route path="/home" element={<Home />} />
-          <Route path="*" element={<NotFoundPage/>}/>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </div>
