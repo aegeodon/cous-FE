@@ -1,9 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-const SelectBar = () => {
-  const [selected, setSelected] = useState("showCourse");
-
+const SelectBar = ({ selected, setSelected }) => {
   const handleSelect = (option) => {
     setSelected(option);
   };
