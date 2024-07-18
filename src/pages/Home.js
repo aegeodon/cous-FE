@@ -1,20 +1,28 @@
 import styled from "styled-components";
+import { useState } from "react";
 import CourseItem from "../components/CourseItem";
 import SelectBar from "../components/SelectBar";
+import { RandomComponent } from "../components/RandomComponent";
 
 const Home = () => {
+  const [selected, setSelected] = useState("showCourse");
+
   return (
     <HomeWrapper>
       <HomeContainer>
         <Title>코럼버스</Title>
-        <SelectBar />
-        <Div>
-          <CourseItem />
-          <CourseItem />
-          <CourseItem />
-          <CourseItem />
-          <CourseItem />
-        </Div>
+        <SelectBar selected={selected} setSelected={setSelected} />
+        {selected === "showCourse" ? (
+          <Div>
+            <CourseItem />
+            <CourseItem />
+            <CourseItem />
+            <CourseItem />
+            <CourseItem />
+          </Div>
+        ) : (
+          <RandomComponent />
+        )}
       </HomeContainer>
     </HomeWrapper>
   );
