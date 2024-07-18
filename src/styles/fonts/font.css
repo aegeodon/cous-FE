@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'SUIT';
+	font-family: 'SUIT-Thin';
 	font-weight: 100;
 	src: local('SUIT Thin'), url('./SUIT-Thin.ttf') format('ttf');
 }
@@ -42,4 +42,9 @@
 	font-family: 'SUIT';
 	font-weight: 900;
 	src: local('SUIT Heavy'), url('./SUIT-Heavy.ttf') format('ttf');
+}
+@font-face {
+	font-family: 'HSSanTokki';
+	font-weight: 400;
+	src: local('HSSanTokki'), url('./HSSanTokki.ttf') format('ttf');
 }

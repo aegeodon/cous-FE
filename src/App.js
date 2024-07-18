@@ -11,7 +11,11 @@ function App() {
         <Routes>
           <Route path="/" element={<StartPage />} />
           <Route path="/home" element={<Home />} />
+<<<<<<< HEAD
           <Route path="*" element={<NotFoundPage />} />
+=======
+          <Route path="*" element={<NotFoundPage/>}/>
+>>>>>>> 204ea77dcfd9b43cbe2a74d556f599f13e5d0eed
         </Routes>
       </BrowserRouter>
     </div>

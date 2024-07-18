@@ -22,7 +22,6 @@ const StyleDiv = styled.div`
   p {
     color: #000;
     text-align: center;
-    font-family: "SUIT";
     font-size: 40px;
     font-style: normal;
     font-weight: 500;
